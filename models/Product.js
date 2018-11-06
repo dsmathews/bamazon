@@ -1,9 +1,9 @@
 module.exports = function(sequelize, DataTypes) {
     const Products = sequelize.define('Products', {
       id: {
-        primary_key: id,
-        type: DataTypes.Integer,
-        allowNull: false
+        primaryKey: true,
+        type: sequelize.Integer,
+        autoIncrement: true
       },
       
       product_name:{

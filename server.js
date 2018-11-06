@@ -7,12 +7,14 @@ const app = express();
 // Defines a PORT for the server to listen for requests
 var PORT = process.env.PORT || 3000;
 
+// const db = require('./models');
+
 // Sets up our server to parse our request body for usage
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Sets our server to use the public directory for static assets
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, './public')));
 
 // Routes
 // -----------------
@@ -21,6 +23,8 @@ require('./routes/api-routes.js')(app);
 require('./routes/html-routes.js')(app);
 
 // Starts our server on the predefined PORT
-app.listen(PORT, function(){
-  console.log(`App is now listening on PORT ${PORT}`)
+db.sequelize.sync({ force: true }).then(function() {
+  app.listen(PORT, function() {
+    console.log('App listening on PORT ' + PORT);
+  });
 });
