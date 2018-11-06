@@ -1,0 +1,29 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "E-commerce style project using SQL and seuqlize",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "sequelize": "^4.41.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsmathews/bamazon.git"
+  },
+  "keywords": [
+    "SQL",
+    "seuqelize"
+  ],
+  "author": "Scott Mathews",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dsmathews/bamazon/issues"
+  },
+  "homepage": "https://github.com/dsmathews/bamazon#readme"
+}

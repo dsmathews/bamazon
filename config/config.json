@@ -1,0 +1,24 @@
+{
+    "development": {
+      "username": "root",
+      "password": "J@ck3t5!2018",
+      "database": "bamazonDB",
+      "host": "localhost",
+      "port": 3306,
+      "dialect": "mysql"
+    },
+    "test": {
+      "username": "root",
+      "password": "J@ck3t5!2018",
+      "database": "bamazonDB",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    "production": {
+      "username": "root",
+      "password": "J@ck3t5!2018",
+      "database": "bamazonDB",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    }
+  }
