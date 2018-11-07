@@ -1,31 +1,24 @@
-module.exports = function(sequelize, DataTypes) {
-    const Products = sequelize.define('Products', {
-      id: {
-        primaryKey: true,
-        type: sequelize.Integer,
-        autoIncrement: true
-      },
-      
-      product_name:{
-          type: DataTypes.STRING,
+module.exports = function(connection, Sequelize) {
+    const Products = connection.define('Products', {
+      productName:{
+          type: Sequelize.STRING,
           allowNull: false
       },
       
-      department_name: {
-          type: DataTypes.STRING,
+      departmentName: {
+          type: Sequelize.STRING,
           allowNull: false
       },
 
       price: {
-          type: DataTypes.Integer,
+          type: Sequelize.INTEGER,
           allowNull: false
       },
 
-      stock_quantity: {
-          type: DataTypes.Integer,
+      stockQuantity: {
+          type: Sequelize.INTEGER,
           allowNull: true
       },
-
-
     });
+    return Products;
   };
