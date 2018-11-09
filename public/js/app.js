@@ -38,8 +38,9 @@ $(function () {
             $('<td>').append(button)
         );
         return tr;
-    
     };
+    
+
     getItems();
     
 });
