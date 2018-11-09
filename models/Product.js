@@ -22,7 +22,7 @@ module.exports = function(connection, Sequelize) {
 
       
     },{
-        freezeTableName: true
+        freezeTableName: true,
     });
     return Products;
   };
