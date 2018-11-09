@@ -1,28 +1,25 @@
 module.exports = function(connection, Sequelize) {
-    const Products = connection.define('Products', {
-      productName:{
+    const Product = connection.define('Product', {
+      product_name:{
           type: Sequelize.STRING,
           allowNull: false
       },
       
-      departmentName: {
+      department_name: {
           type: Sequelize.STRING,
           allowNull: false
       },
-
-      stockQuantity: {
-        type: Sequelize.INTEGER,
-        allowNull: true
-    },
 
       price: {
           type: Sequelize.FLOAT,
           allowNull: false
       },
 
+      stock_quantity: {
+        type: Sequelize.INTEGER,
+        allowNull: true
+    },
       
-    },{
-        freezeTableName: true,
     });
-    return Products;
+    return Product;
   };
