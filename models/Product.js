@@ -16,7 +16,7 @@ module.exports = function(connection, Sequelize) {
     },
 
       price: {
-          type: Sequelize.INTEGER,
+          type: Sequelize.FLOAT,
           allowNull: false
       },
 
