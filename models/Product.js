@@ -10,15 +10,19 @@ module.exports = function(connection, Sequelize) {
           allowNull: false
       },
 
+      stockQuantity: {
+        type: Sequelize.INTEGER,
+        allowNull: true
+    },
+
       price: {
           type: Sequelize.INTEGER,
           allowNull: false
       },
 
-      stockQuantity: {
-          type: Sequelize.INTEGER,
-          allowNull: true
-      },
+      
+    },{
+        freezeTableName: true
     });
     return Products;
   };
