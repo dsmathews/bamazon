@@ -25,7 +25,8 @@
 
 <body>
     <header>
-        <h1 class="text-center">George P. Burdell Emporium</h1>
+        <h1 class="text-center">George P. Burdell Emporium </h1>
+       
         
     </header>
     <div class="container">
@@ -38,10 +39,11 @@
                     <table class="table">
                         <thead class="thead-dark">
                             <tr>
-                                <th>Qty</th>
+                                
                                 <th>Description</th>
                                 <th>In Stock</th>
                                 <th>Price</th>
+                                <th>Quantity</th>
                                 <th><i class="fas fa-shopping-basket fa-lg ml-4"></i> </th>
                             </tr>
                         </thead>
@@ -53,28 +55,51 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td><button type="button" class="btn btn-primary btn-lg float-right"><i class="fas fa-shipping-fast fa-3x"></i></button></td>
+                                <td><button type="button" class="btn btn-primary btn-lg float-right" id="cart" data-toggle="modal" data-target="#shopping-cart"><i class="fas fa-shipping-fast fa-3x"></i></button></td>
                             </tr>
                         </tfoot>
                     </table>
                 </div>
             </div>
         </div>
-        <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal" tabindex="-1" role="dialog" id="shopping-cart">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title">Modal title</h5>
+                  <h5 class="modal-title">Order Confirmation</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                  <p>Modal body text goes here.</p>
+                  <div class="table-responsive">
+                      <table class="table">
+                          <thead class="thead-dark">
+                              <tr>
+                                  
+                                  <th>Description</th>
+                                  <th>Price</th>
+                                  <th>Quantity</th>
+                                  <th>Total</th>
+                              </tr>
+                          </thead>
+                          <tbody id="cart-items">
+
+                          </tbody>
+                          <tbody>
+                              <tr>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td class="cart-total"></td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Confirm Order</button>
+                  <button type="button" id="checkout" class="btn btn-primary" data-toggle="modal" data-target="#shopping-cart">Confirm Order</button>
                 </div>
               </div>
             </div>

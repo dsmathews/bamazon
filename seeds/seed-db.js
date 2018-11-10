@@ -75,7 +75,7 @@
        price: 25.50,
        stock_quantity: 45
    }
-   ]
+   ];
    
    db.sequelize.sync({force: true}).then(function () {
     db.Product.bulkCreate(items).then(function (data) {
