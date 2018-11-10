@@ -80,18 +80,17 @@ $(function () {
         $.get(`/api/products/${id}`).then(updateCart);
     };
     const updateCart = function (data) {
-        const numberRequested = $(`#${data.id}`).val();
+        const numRequested = $(`#${data.id}`).val();
 
         // comparison to check quantity and if not enough then message
-        if (numberRequested > data.stock_quantity) {
-            message('danger', `Item request exceeds the amount of available stock.`);
+        if (numRequested > data.stock_quantity) {
+            message('danger', `We're sorry. We only have ${data.stock_quantity} in stock`);
         } else {
-            addRow(numberRequested, data);
+            addRow(numRequested, data);
             message('success', 'Items successfully added to cart!');
             $(`#${data.id}`).val('');
         }
-    }; 
-    const checkout = function () {
+    }; const checkout = function () {
         calculateTotal();
 
         const index = cartItems.length - 1;
