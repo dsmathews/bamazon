@@ -79,10 +79,8 @@
    
    db.sequelize.sync({force: true}).then(function () {
     db.Product.bulkCreate(items).then(function (data) {
-       console.log('Data successfully added!');
        db.sequelize.close();
    }).catch(function (error) {
-       console.log('Error:', error);
        db.sequelize.close();
    });
    });

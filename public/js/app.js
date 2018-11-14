@@ -131,7 +131,6 @@ $(function () {
                 url: `/api/products/${cartItems[i].id}`,
                 data: cartItems[i]
             }).then(function (data) {
-                console.log(i, "this is the index");
                 i--;
                 updateItem(i);
             });
